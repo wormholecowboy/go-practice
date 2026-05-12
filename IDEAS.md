@@ -6,7 +6,7 @@ Each project fits in one sitting. Docs links included — no hand-holding.
 
 ## Syntax & Fundamentals
 
-- [ ] **FizzBuzz CLI** — loops, conditionals, `fmt`, `os.Args`. [Tour of Go](https://go.dev/tour/)
+- [x] **FizzBuzz CLI** — loops, conditionals, `fmt`, `os.Args`. [Tour of Go](https://go.dev/tour/)
 - [ ] **Unit converter** — structs, methods, iota/const enums. [Effective Go](https://go.dev/doc/effective_go)
 - [ ] **Fibonacci (iterative + recursive)** — functions, multiple return values. [Go spec: Functions](https://go.dev/ref/spec#Function_declarations)
 - [ ] **String frequency counter** — maps, range, `strings` pkg. [pkg: strings](https://pkg.go.dev/strings)
