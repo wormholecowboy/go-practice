@@ -1,5 +1,19 @@
 # Lesson 1 — FizzBuzz CLI
 
+## Spec
+
+- Accept a single integer argument N from the command line
+- Loop from 1 to N (inclusive)
+- For each number:
+  - Divisible by both 3 and 5 → print `FizzBuzz`
+  - Divisible by 3 only → print `Fizz`
+  - Divisible by 5 only → print `Buzz`
+  - Otherwise → print the number
+- If no argument is given, print an error and exit
+- If the argument is not a valid integer, print an error and exit
+
+---
+
 1. **Initialize a module** — run `go mod init` in your project folder. Read [Go modules intro](https://go.dev/doc/code#Organization) — https://go.dev/doc/code#Organization to understand what this creates.
 
 2. **Wire up `main`** — every executable Go program needs `package main` and a `func main()`. Nothing runs without it.
