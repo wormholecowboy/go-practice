@@ -7,6 +7,6 @@
 - [go] each lesson folder gets a LESSON.md with the plan
 
 ## learnings
-- [go] lesson format: Spec section first (inputs, outputs, rules, edge cases), then numbered steps, no code examples
+- [go] lesson format: Spec section first (inputs, outputs, rules, edge cases), then numbered steps, no code examples; add brief excited notes when a step involves a classic/fundamental CS pattern
 - [go] doc links: always markdown link + bare URL side by side so user can click in UI
 - [go] lesson steps: bold title + plain-English explanation + relevant doc links per step
