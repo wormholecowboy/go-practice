@@ -4,51 +4,39 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"strings"
 )
 
-func readInput(input io.Reader) (int, int, int) {
-	var wordCount, byteCount, lineCount int
+func readInput(input io.Reader) (words, lines, bytes int) {
 	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		text := scanner.Text()
-
-		textStrings := strings.Fields(text)
-		wordCount += len(textStrings)
-
-		byteCount += len(text) + 1
-
-		lineCount++
-
+		words += len(strings.Fields(text))
+		bytes += len(text) + 1
+		lines++
 	}
-	return wordCount, lineCount, byteCount
+	return
 }
 
 func main() {
-	var reader io.Reader
+	var f *os.File
+	var filename string
 
 	if len(os.Args) < 2 {
-		reader = os.Stdin
-	}
-
-	var input string
-	if os.Args[1] != "" {
-		input = os.Args[1]
-	}
-
-	if _, err := os.Stat(input); err == nil {
-		var openErr error
-		reader, openErr = os.Open(input)
-		defer reader.Close()
-		if openErr != nil {
-			fmt.Print("File does not exist or could not be opened. \n")
-			os.Exit(1)
-		}
+		f = os.Stdin
 	} else {
-		reader = os.Args[1]
+		filename = os.Args[1]
+		var err error
+		f, err = os.Open(filename)
+		if err != nil {
+			log.Fatal("Not a file")
+		}
+		defer f.Close()
+
 	}
 
-	wordCount, lineCount, byteCount := readInput(reader)
-	fmt.Printf("%v %v %v %v \n", lineCount, wordCount, byteCount, os.Args[1])
+	wordCount, lineCount, byteCount := readInput(f)
+	fmt.Printf("%v %v %v %v \n", lineCount, wordCount, byteCount, filename)
 }
