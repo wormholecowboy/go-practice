@@ -2,27 +2,19 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"strconv"
+	"time"
 )
 
-var count int
-
 func loop(num int) int {
-	if num <= 1 {
-		return num
+	first := 0
+	second := 1
+	for i := 0; i < num; i++ {
+		first, second = second, second+first
 	}
-
-	fmt.Println("Starting loop version")
-	for i := num; i >= 1; i-- {
-
-	}
-
-	fmt.Println("Starting recusive version")
-	recurResult := recur(num)
-	fmt.Println("%d iterations", recurResult)
-
-	return -1
+	return first
 }
 
 func recur(num int) int {
@@ -33,14 +25,22 @@ func recur(num int) int {
 }
 
 func main() {
-	num, err:= strconv.Atoi(os.Args[1])
+	if len(os.Args) < 2 {
+		log.Fatal("Need arg")
+	}
+	num, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Print("Nope")
 		os.Exit(1)
 	}
-	fmt.Println("Fibbing %d", num)
-	fib := recur(55)
-	fmt.Printf("fib: %d", fib)
 
+	fibStart := time.Now()
+	fib := recur(num)
+	fibEnd := time.Now()
+	fmt.Printf("fib: %d, time: %v \n", fib, fibEnd.Sub(fibStart))
+	loopStart := time.Now()
+	lp := loop(num)
+	loopEnd := time.Now()
+	fmt.Printf("loop: %d, time: %v \n", lp, loopEnd.Sub(loopStart))
 
 }
