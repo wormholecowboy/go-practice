@@ -7,9 +7,9 @@ Each project fits in one sitting. Docs links included — no hand-holding.
 ## Syntax & Fundamentals
 
 - [x] **FizzBuzz CLI** — loops, conditionals, `fmt`, `os.Args`. [Tour of Go](https://go.dev/tour/)
-- [ ] **Unit converter** — structs, methods, iota/const enums. [Effective Go](https://go.dev/doc/effective_go)
-- [ ] **Fibonacci (iterative + recursive)** — functions, multiple return values. [Go spec: Functions](https://go.dev/ref/spec#Function_declarations)
-- [ ] **String frequency counter** — maps, range, `strings` pkg. [pkg: strings](https://pkg.go.dev/strings)
+- [x] **Unit converter** — structs, methods, iota/const enums. [Effective Go](https://go.dev/doc/effective_go)
+- [x] **Fibonacci (iterative + recursive)** — functions, multiple return values. [Go spec: Functions](https://go.dev/ref/spec#Function_declarations)
+- [x] **String frequency counter** — maps, range, `strings` pkg. [pkg: strings](https://pkg.go.dev/strings)
 - [ ] **Stack & Queue** — generics (Go 1.18+), type parameters. [Go generics intro](https://go.dev/doc/faq#generics)
 - [ ] **Variadic logger** — variadic functions, `log` package, log levels. [pkg: log](https://pkg.go.dev/log)
 
@@ -27,7 +27,7 @@ Each project fits in one sitting. Docs links included — no hand-holding.
 
 ## Systems & OS
 
-- [ ] **`wc` clone** — read stdin/file, count lines/words/bytes, `bufio.Scanner`. [pkg: bufio](https://pkg.go.dev/bufio), [pkg: os](https://pkg.go.dev/os)
+- [x] **`wc` clone** — read stdin/file, count lines/words/bytes, `bufio.Scanner`. [pkg: bufio](https://pkg.go.dev/bufio), [pkg: os](https://pkg.go.dev/os)
 - [ ] **File watcher** — poll a dir for changes using `os.Stat`, goroutines, ticker. [pkg: filepath](https://pkg.go.dev/path/filepath)
 - [ ] **Process lister** — exec `ps` via `os/exec`, parse output, pretty-print. [pkg: os/exec](https://pkg.go.dev/os/exec)
 - [ ] **TCP echo server** — `net.Listen`, `net.Conn`, goroutine per connection. [pkg: net](https://pkg.go.dev/net)
