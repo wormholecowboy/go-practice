@@ -11,7 +11,7 @@ Each project fits in one sitting. Docs links included — no hand-holding.
 - [x] **Fibonacci (iterative + recursive)** — functions, multiple return values. [Go spec: Functions](https://go.dev/ref/spec#Function_declarations)
 - [x] **String frequency counter** — maps, range, `strings` pkg. [pkg: strings](https://pkg.go.dev/strings)
 - [x] **Stack & Queue** — generics (Go 1.18+), type parameters. [Go generics intro](https://go.dev/doc/faq#generics)
-- [ ] **Variadic logger** — variadic functions, `log` package, log levels. [pkg: log](https://pkg.go.dev/log)
+- [x] **Variadic logger** — variadic functions, `log` package, log levels. [pkg: log](https://pkg.go.dev/log)
 
 ---
 
