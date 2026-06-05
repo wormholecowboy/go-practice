@@ -33,16 +33,15 @@ func (l *List[T]) PushTail(v T) {
 
 func (l *List[T]) PopHead() (T, bool) {
 	if l.head == nil {
-		var out T
-		return out, false
+		var dummy T
+		return dummy, false
 	}
 
 	out := l.head.value
-	if l.head.next == nil {
-		return out, true
-	}
-
 	l.head = l.head.next
+	if l.head == nil {
+		l.tail = nil
+	}
 	return out, true
 }
 
