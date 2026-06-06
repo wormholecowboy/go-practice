@@ -17,7 +17,7 @@ Each project fits in one sitting. Docs links included — no hand-holding.
 
 ## Concurrency (Go's superpower)
 
-- [ ] **Ping-pong channels** — goroutines, unbuffered channels, `sync.WaitGroup`. [Tour: Concurrency](https://go.dev/tour/concurrency/1)
+- [x] **Ping-pong channels** — goroutines, unbuffered channels, `sync.WaitGroup`. [Tour: Concurrency](https://go.dev/tour/concurrency/1)
 - [ ] **Fan-out worker pool** — buffered channels, N workers consuming a job queue. [Go blog: Pipelines](https://go.dev/blog/pipelines)
 - [ ] **Rate limiter** — `time.Ticker`, channel-based token bucket. [Go blog: Rate limiting](https://gobyexample.com/rate-limiting)
 - [ ] **Parallel file hasher** — goroutines, `crypto/md5`, `sync.Mutex`. [pkg: sync](https://pkg.go.dev/sync)
@@ -41,7 +41,7 @@ Each project fits in one sitting. Docs links included — no hand-holding.
 
 - [ ] **Binary search** — slices, zero-value semantics, benchmarking with `testing.B`. [pkg: testing](https://pkg.go.dev/testing)
 - [ ] **Merge sort** — recursion, slice manipulation, generics ordering constraint. [Go spec: Comparison operators](https://go.dev/ref/spec#Comparison_operators)
-- [ ] **Linked list** — pointer semantics, method sets on pointer receivers. [Effective Go: Pointers](https://go.dev/doc/effective_go#pointers_vs_values)
+- [x] **Linked list** — pointer semantics, method sets on pointer receivers. [Effective Go: Pointers](https://go.dev/doc/effective_go#pointers_vs_values)
 - [ ] **Ring buffer** — fixed-size circular queue, head/tail index wrapping, O(1) enqueue+dequeue. [Go spec: Arrays](https://go.dev/ref/spec#Array_types) — https://go.dev/ref/spec#Array_types
 - [ ] **LRU cache** — maps + doubly linked list, `container/list`. [pkg: container/list](https://pkg.go.dev/container/list)
 - [ ] **BFS/DFS on a graph** — adjacency list with maps, recursion vs iteration. [Go spec: Maps](https://go.dev/ref/spec#Map_types)

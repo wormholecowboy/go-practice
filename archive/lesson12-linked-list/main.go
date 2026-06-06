@@ -69,6 +69,54 @@ func (l *List[T]) Iter(fn func(val T) bool) {
 	}
 }
 
+func (l *List[T]) Reverse() {
+	if l.head == nil {
+		return
+	}
+	l.tail = l.head
+	var prev *node[T]
+	curr := l.head
+	for curr != nil {
+		next := curr.next
+		curr.next = prev
+		prev = curr
+		curr = next
+	}
+	l.head = prev
+}
+
 func main() {
-	//
+	l := &List[int]{}
+
+	l.PushTail(1)
+	l.PushTail(2)
+	l.PushTail(3)
+	l.PushHead(0)
+	l.PushHead(4)
+	l.PushHead(5)
+	l.PushHead(6)
+
+	println("Initial list:")
+	println("  Len:", l.Len())
+	for _, v := range l.ToSlice() {
+		print(v, " ")
+	}
+	println()
+
+	l.Iter(func(val int) bool {
+		print("iter:", val, " ")
+		return true
+	})
+	println()
+
+	v, ok := l.PopHead()
+	println("PopHead:", v, ok)
+	println("After pop:", l.Len(), "items")
+
+	l.Reverse()
+	println("After reverse:")
+	for _, v := range l.ToSlice() {
+		print(v, " ")
+	}
+	println()
 }
