@@ -45,6 +45,15 @@ func (l *List[T]) PopHead() (T, bool) {
 	return out, true
 }
 
+func (l *List[T]) PeekHead() (T, bool) {
+	if l.head == nil {
+		var dummy T
+		return dummy, false
+	}
+
+	return l.head.value, true
+}
+
 func (l *List[T]) Len() int {
 	var length int
 	for n := l.head; n != nil; n = n.next {
